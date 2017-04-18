@@ -1,5 +1,151 @@
 <md-content>
-	<div>
-		Login Page
+	<div layout="column">
+		<div>
+			One
+		</div>
+		<div>
+			<md-checkbox ng-model="isChecked" aria-label="Finished?" class="primary-hue-1">
+			  Finished ?
+			</md-checkbox>
+		</div>
 	</div>
 </md-content>
+<md-content class="md-padding">
+    <p>
+      You can use the fabToolbar with a trigger and regular toolbar.
+    </p>
+
+    <p>
+      You may use the <code>md-open</code> attribute to programmatically control whether or not the
+      control is open, and you may set the direction that the toolbar appears using the
+      <code>md-direction</code> attribute. This component currently supports the <code>left</code>
+      and <code>right</code> options.
+    </p>
+  </md-content>
+
+  <md-fab-toolbar md-open="demo.isOpen" count="demo.count"
+                  md-direction="{{demo.selectedDirection}}">
+    <md-fab-trigger class="align-with-text">
+      <md-button aria-label="menu" class="md-fab">
+        <md-icon md-svg-src="img/icons/menu.svg"></md-icon>
+      </md-button>
+    </md-fab-trigger>
+
+    <md-toolbar>
+      <md-fab-actions class="md-toolbar-tools">
+        <md-button aria-label="comment" class="md-icon-button">
+          <md-icon md-svg-src="img/icons/ic_comment_24px.svg"></md-icon>
+        </md-button>
+        <md-button aria-label="label" class="md-icon-button">
+          <md-icon md-svg-src="img/icons/ic_label_24px.svg"></md-icon>
+        </md-button>
+        <md-button aria-label="photo" class="md-icon-button">
+          <md-icon md-svg-src="img/icons/ic_photo_24px.svg"></md-icon>
+        </md-button>
+      </md-fab-actions>
+    </md-toolbar>
+  </md-fab-toolbar>
+
+  <md-content class="md-padding" layout="column">
+    <div layout="row" layout-align="space-around">
+      <div layout="column">
+        <b>Open/Closed</b>
+
+        <md-radio-group ng-model="demo.isOpen">
+          <md-radio-button ng-value="true">Open</md-radio-button>
+          <md-radio-button ng-value="false">Closed</md-radio-button>
+        </md-radio-group>
+      </div>
+
+      <div layout="column">
+        <b>Direction</b>
+
+        <md-radio-group ng-model="demo.selectedDirection">
+          <md-radio-button ng-value="'left'">Left</md-radio-button>
+          <md-radio-button ng-value="'right'">Right</md-radio-button>
+        </md-radio-group>
+      </div>
+    </div>
+  </md-content>
+  
+  <md-content>
+  	<section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+      <md-button>Vamsi</md-button>
+      <md-button md-no-ink class="md-primary">Primary (md-noink)</md-button>
+      <md-button ng-disabled="true" class="md-primary">Disabled</md-button>
+      <md-button class="md-warn">{{title4}}</md-button>
+      <div class="label">Flat</div>
+    </section>
+
+    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+      <md-button class="md-raised">Button</md-button>
+      <md-button class="md-raised md-primary">Primary</md-button>
+      <md-button ng-disabled="true" class="md-raised md-primary">Disabled</md-button>
+      <md-button class="md-raised md-warn">Warn</md-button>
+      <div class="label">Raised</div>
+    </section>
+
+    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+        <md-button class="md-fab" aria-label="Eat cake">
+            <md-icon md-svg-src="img/icons/cake.svg"></md-icon>
+        </md-button>
+
+        <md-button class="md-fab md-primary" aria-label="Use Android">
+          <md-icon md-svg-src="img/icons/android.svg"></md-icon>
+        </md-button>
+
+        <md-button class="md-fab" ng-disabled="true" aria-label="Comment">
+            <md-icon md-svg-src="img/icons/ic_comment_24px.svg"></md-icon>
+        </md-button>
+
+        <md-button class="md-fab md-primary md-hue-2" aria-label="Profile">
+            <md-icon md-svg-src="img/icons/ic_people_24px.svg"></md-icon>
+        </md-button>
+
+        <md-button class="md-fab md-mini" aria-label="Eat cake">
+            <md-icon md-svg-src="img/icons/cake.svg"></md-icon>
+        </md-button>
+
+        <md-button class="md-fab md-mini md-primary" aria-label="Use Android">
+          <md-icon md-svg-src="img/icons/android.svg" style="color: greenyellow;"></md-icon>
+        </md-button>
+      <div class="label">FAB</div>
+    </section>
+
+    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+        <md-button ng-href="{{googleUrl}}" target="_blank">Default Link</md-button>
+        <md-button class="md-primary" ng-href="{{googleUrl}}" target="_blank">Primary Link</md-button>
+
+        <md-button>Default Button</md-button>
+      <div class="label">Link vs. Button</div>
+    </section>
+
+    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+      <md-button class="md-primary md-raised md-hue-1">Primary Hue 1</md-button>
+      <md-button class="md-warn md-raised md-hue-2">Warn Hue 2</md-button>
+      <md-button class="md-accent">Accent</md-button>
+      <md-button class="md-accent md-raised md-hue-1">Accent Hue 1</md-button>
+      <div class="label">Themed</div>
+    </section>
+
+    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+      <md-button class="md-icon-button md-primary" aria-label="Settings">
+        <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+      </md-button>
+      <md-button class="md-icon-button md-accent" aria-label="Favorite">
+        <md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>
+      </md-button>
+      <md-button class="md-icon-button" aria-label="More">
+        <md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>
+      </md-button>
+      <md-button href="http://google.com"
+                 title="Launch Google.com in new window"
+                 target="_blank"
+                 ng-disabled="true"
+                 aria-label="Google.com"
+                 class="md-icon-button launch" >
+        <md-icon md-svg-icon="img/icons/launch.svg"></md-icon>
+      </md-button>
+      <div class="label">Icon Button</div>
+    </section>
+  </md-content>
