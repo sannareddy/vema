@@ -32,14 +32,14 @@ public class HibernateConfigurer {
 	@Bean
 	public LocalSessionFactoryBean sessionFactory() {
 		LocalSessionFactoryBean sessionFactory=new LocalSessionFactoryBean();
-		sessionFactory.setDataSource(getDataSource());
+		sessionFactory.setDataSource(dataSource());
 		sessionFactory.setPackagesToScan(new String[]{"edu.vemaschools.entities"});
 		sessionFactory.setHibernateProperties(hibernateProperties());
 		
 		return sessionFactory;
 	}
 	@Bean
-	public DataSource getDataSource() {
+	public DataSource dataSource() {
 		BasicDataSource dataSource=new BasicDataSource();
 		dataSource.setDriverClassName(env.getProperty("jdbc.driverClassName"));
 		dataSource.setUrl(env.getProperty("jdbc.url"));
@@ -53,7 +53,7 @@ public class HibernateConfigurer {
 		return new Properties() {
 			private static final long serialVersionUID = 1L;
 			{
-				setProperty("hibernate.hbm2ddl.auto", env.getProperty("hibernate.hbm2ddl.auto"));
+				//setProperty("hibernate.hbm2ddl.auto", env.getProperty("hibernate.hbm2ddl.auto"));
 				setProperty("hibernate.dialect", env.getProperty("hibernate.dialect"));
 				setProperty("hibernate.globally_quoted_identifiers", "true");
 				setProperty("hibernate.show_sql", env.getProperty("hibernate.show_sql"));

@@ -1,0 +1,27 @@
+package edu.vemaschools.controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+@Controller 
+public class RootController {
+	@RequestMapping(path="/") 
+	public String defaultPath() {
+		return "redirect:index";
+	}
+
+	@RequestMapping(path="/login") 
+	public String login() {
+		return "open/login/login.tpl.html";
+	}
+	@RequestMapping(path="/login",params="error") 
+	public String loginFailed() {
+		return "open/login/loginFailed.tpl.html";
+	}
+	@RequestMapping(path="/loginSuccess")
+	@ResponseBody
+	public String loginSuccess() {
+		return "SUCCESS";
+	}
+}
