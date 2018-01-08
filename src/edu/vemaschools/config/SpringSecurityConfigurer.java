@@ -72,7 +72,7 @@ public class SpringSecurityConfigurer extends WebSecurityConfigurerAdapter{
 	
 	@Override
 	public void configure(WebSecurity web) throws Exception {
-		web.ignoring().antMatchers("/lib/**","/images/**","/open/**","/global/**");
+		web.ignoring().antMatchers("/lib/**","/images/**","/open/**","/global/**","/node/**");
 	} 
 
 	@Override

@@ -13,7 +13,7 @@ public class RootController {
 
 	@RequestMapping(path="/login") 
 	public String login() {
-		return "open/login/login.tpl.html";
+		return "login";
 	}
 	@RequestMapping(path="/login",params="error") 
 	public String loginFailed() {
