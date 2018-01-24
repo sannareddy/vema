@@ -5,13 +5,14 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
         <title><tiles:getAsString name="title"/></title>
-        <tiles:insertAttribute name="header"/>
+        <tiles:insertAttribute name="includes"/>
     </head>
     <body>
-        <div>
-            <tiles:insertAttribute name="menu"/>
+    	<div class="container">
+    		<tiles:insertAttribute name="header"/>
+    		<tiles:insertAttribute name="menu"/>
             <tiles:insertAttribute name="body"/>
 	        <tiles:insertAttribute name="footer"/>
-        </div>
+    	</div>
     </body>
 </html>

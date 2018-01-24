@@ -1,9 +1,21 @@
-<div>
-	<form name="f" method="POST" action="authenticate">		
-		<label>Username</label>
-		<input type="text" name="username"/>
-		<label>Password</label>
-		<input type="password" name="password"/>
-		<button class="btn btn-primary" type="submit">Submit</button>
+<div class="container" style="width:300px">
+	<form name="f" method="POST" action="authenticate">
+		<div class="row">
+			<div class="form-group">
+				<label for="username_lbl">Username</label>
+				<input type="text" class="form-control va_m_txt" id="username" name="username" placeholder="Username"/>  
+			</div>
+		</div>
+		<div class="row">	
+			<div class="form-group">
+				<label for="password_lbl">Password</label>
+				<input type="password" class="form-control va_m_txt" id="password" name="password" placeholder="Password"/>  
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				<input type="submit" class="btn btn-primary form-control va_m_btn" value="Login"/>
+			</div>
+		</div>
 	</form>
 </div>

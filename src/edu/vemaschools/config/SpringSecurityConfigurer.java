@@ -83,7 +83,6 @@ public class SpringSecurityConfigurer extends WebSecurityConfigurerAdapter{
 			.invalidateHttpSession(true);*/
 		
 		http.authorizeRequests()
-			.antMatchers("/secured/**").fullyAuthenticated()
 			.antMatchers("/admin/**").hasRole("ADMIN")
 			.anyRequest().fullyAuthenticated()
 			.and()

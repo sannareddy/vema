@@ -3,7 +3,9 @@
    "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 <tiles-definitions>
     <definition name="template-def" template="/WEB-INF/views/layouts/defaultLayout.jsp">  
-        <put-attribute name="title" value="Vema High Schools" />  
+        <put-attribute name="title" value="Vema High Schools" />
+        <put-attribute name="includes"
+           value="/WEB-INF/views/pages/secured/common/includes.jsp" />  
         <put-attribute name="header"
            value="/WEB-INF/views/pages/secured/common/header.jsp" />  
         <put-attribute name="menu"
@@ -19,6 +21,10 @@
     <definition name="login" extends="template-def">  
         <put-attribute name="title" value="Vema High Schools-Login" />  
         <put-attribute name="body"	value="/WEB-INF/views/pages/public/login/login.jsp" />   
+    </definition>
+    <definition name="invalidlogin" extends="template-def">  
+        <put-attribute name="title" value="Vema High Schools-LoginError" />  
+        <put-attribute name="body"	value="/WEB-INF/views/pages/public/login/loginFailed.jsp" />   
     </definition>
     <definition name="index" extends="template-def">  
         <put-attribute name="title" value="Vema High Schools-Login" />  

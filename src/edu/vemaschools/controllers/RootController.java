@@ -17,7 +17,7 @@ public class RootController {
 	}
 	@RequestMapping(path="/login",params="error") 
 	public String loginFailed() {
-		return "open/login/loginFailed.tpl.html";
+		return "invalidlogin";
 	}
 	@RequestMapping(path="/loginSuccess")
 	@ResponseBody
