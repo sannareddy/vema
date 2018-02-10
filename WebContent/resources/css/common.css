@@ -1,8 +1,81 @@
 @CHARSET "UTF-8";
+@font-face {
+  font-family: 'Forum';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Forum.ttf');
+}
+
+@font-face {
+  font-family: 'LQuicksand';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Quicksand_Light.ttf');
+}
+
+@font-face {
+  font-family: 'RQuicksand';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Quicksand_Regular.ttf');
+}
+
+
 .va_m_txt{
 	width:250px;
 }
 
 .va_m_btn{
 	width:100px;
+}
+.va_header_logo{
+	height:100px;
+}
+.va_screen_center{
+	
+}
+.va_left_align{
+	display:flex;
+	flex-direction:column;
+	align-items:begin;
+}
+.va_right_align{
+	display:flex;
+	flex-direction:column;
+	align-items:end;
+}
+.va_vertical_center{
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+}
+.va_horizontal_center{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
+.va_full_screen{
+	width:100 !important;
+}
+.va_no_padding{
+	padding:0px;
+}
+#main_header{
+	font-family: RQuicksand;
+	font-size:25px;
+}
+body{
+	font-family: RQuicksand;
+}
+#login_form{
+	padding-left:60px;
+}
+.va_menu_text{
+	display:block;
+}
+.va_menu_row{
+	margin:20px 0px 20px 0px;
+}
+.va_menu_item{
+	cursor: pointer;
 }

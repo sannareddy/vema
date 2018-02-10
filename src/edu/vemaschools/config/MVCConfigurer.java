@@ -46,6 +46,12 @@ public class MVCConfigurer extends WebMvcConfigurerAdapter{
 		registry.addResourceHandler("/images/**/*")
 				.addResourceLocations("resources/images/");
 		
+		registry.addResourceHandler("/fonts/**/*")
+				.addResourceLocations("resources/fonts/");
+		
+		registry.addResourceHandler("/js/**/*")
+				.addResourceLocations("resources/js/");
+
 		registry.addResourceHandler("/lib/**/*")
 				.addResourceLocations("resources/lib/");
 		
@@ -59,6 +65,5 @@ public class MVCConfigurer extends WebMvcConfigurerAdapter{
 		registry.addViewController("/login").setViewName("login");
 		registry.addViewController("/home").setViewName("userhome");
 		registry.addViewController("/admin").setViewName("adminhome");
-	}
-	
+	}	
 }

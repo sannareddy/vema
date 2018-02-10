@@ -9,7 +9,7 @@
   "author": "Vamsikrishna Sannareddy",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "~3.3.7",
+    "bootstrap": "~4.0.0",
     "jquery": "~1.12.4"
   }
 }

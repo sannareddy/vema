@@ -15,11 +15,12 @@
            value="/WEB-INF/views/pages/secured/common/footer.jsp" />  
     </definition>  
     <definition name="home" extends="template-def">  
-        <put-attribute name="title" value="Welcome" />  
+        <put-attribute name="title" value="Home" />  
         <put-attribute name="body"	value="/WEB-INF/views/pages/secured/home/home.jsp" />   
     </definition>  
     <definition name="login" extends="template-def">  
         <put-attribute name="title" value="Vema High Schools-Login" />  
+        <put-attribute name="menu" value=""/>
         <put-attribute name="body"	value="/WEB-INF/views/pages/public/login/login.jsp" />   
     </definition>
     <definition name="invalidlogin" extends="template-def">  
@@ -27,7 +28,7 @@
         <put-attribute name="body"	value="/WEB-INF/views/pages/public/login/loginFailed.jsp" />   
     </definition>
     <definition name="index" extends="template-def">  
-        <put-attribute name="title" value="Vema High Schools-Login" />  
+        <put-attribute name="title" value="User Home" />  
         <put-attribute name="body"	value="/WEB-INF/views/pages/secured/home/home.jsp" />   
     </definition>  
 </tiles-definitions>
