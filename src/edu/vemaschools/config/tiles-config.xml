@@ -11,8 +11,7 @@
         <put-attribute name="menu"
            value="/WEB-INF/views/pages/secured/common/menu.jsp" />  
         <put-attribute name="body" value="" />  
-        <put-attribute name="footer"
-           value="/WEB-INF/views/pages/secured/common/footer.jsp" />  
+        <put-attribute name="footer" value="" />  
     </definition>  
     <definition name="home" extends="template-def">  
         <put-attribute name="title" value="Home" />  
@@ -30,5 +29,10 @@
     <definition name="index" extends="template-def">  
         <put-attribute name="title" value="User Home" />  
         <put-attribute name="body"	value="/WEB-INF/views/pages/secured/home/home.jsp" />   
+    </definition>  
+    <definition name="admissions" extends="template-def">  
+        <put-attribute name="title" value="Admissions" />  
+        <put-attribute name="menu"	value="/WEB-INF/views/pages/secured/common/menu.jsp" />
+        <put-attribute name="body"	value="/WEB-INF/views/pages/secured/admissions/admissions.jsp" />   
     </definition>  
 </tiles-definitions>
