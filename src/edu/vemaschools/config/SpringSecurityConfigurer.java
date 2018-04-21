@@ -70,7 +70,6 @@ public class SpringSecurityConfigurer extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-		// auth.inMemoryAuthentication().withUser("vamsi").password("vamsi").roles("SUPERUSER");
 		auth.jdbcAuthentication()
 				.usersByUsernameQuery("SELECT username,password,status as enabled FROM APP_USERS WHERE username = ? ")
 				.authoritiesByUsernameQuery(
@@ -86,12 +85,6 @@ public class SpringSecurityConfigurer extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-
-		/*
-		 * http.logout().logoutUrl("/logout") .logoutSuccessUrl("/login")
-		 * .invalidateHttpSession(true);
-		 */
-
 		http.authorizeRequests().antMatchers("/admin/**").hasRole("ADMIN").anyRequest().fullyAuthenticated().and()
 				.formLogin().loginPage("/login").loginProcessingUrl("/authenticate").usernameParameter("username")
 				.passwordParameter("password").successHandler(authSuccessHandler).permitAll().and().logout()

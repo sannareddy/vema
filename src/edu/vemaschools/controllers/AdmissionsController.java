@@ -1,22 +1,32 @@
 package edu.vemaschools.controllers;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import edu.vemaschools.entities.EduClass;
+import edu.vemaschools.service.EduClassService;
 
 @Controller
 public class AdmissionsController {
+	
+	@Autowired
+	private EduClassService eduClassService;
+	
 	@RequestMapping("/admissions")
 	public ModelAndView loadAdmissionHome() {
 		ModelAndView admissionsView=new ModelAndView();
-		String[] classes=new String[]{"10th","Inter"};
-		admissionsView.addObject("allClasses", classes);
+		admissionsView.addObject("allClasses", eduClassService.getAllClasses());
 		admissionsView.setViewName("admissions");
 		return admissionsView;
 	}
+	
+	public EduClassService getEduClassService() {
+		return eduClassService;
+	}
+
+	public void setEduClassService(EduClassService eduClassService) {
+		this.eduClassService = eduClassService;
+	}
+
 }
