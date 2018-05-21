@@ -1,7 +1,7 @@
 <%@taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <div class="row">
-	<div class="col-md-offset-9 col-md-3 col-sm-offset-0 col-sm-12">
+	<%-- <div class="col-md-offset-9 col-md-3 col-sm-offset-0 col-sm-12">
 		<sec:authentication property="principal.authorities" var="authorities" />
 		
 		<c:forEach items="${authorities}" var="authority" varStatus="vs">
@@ -17,5 +17,5 @@
 				</div>
 			</c:if>
 		</c:forEach>
-	</div>
+	</div> --%>
 </div>
