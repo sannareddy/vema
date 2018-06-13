@@ -4,22 +4,19 @@
 <tiles-definitions>
     <definition name="template-def" template="/WEB-INF/views/layouts/defaultLayout.jsp">  
         <put-attribute name="title" value="Vema High Schools" />
-        <put-attribute name="includes"
-           value="/WEB-INF/views/pages/secured/common/includes.jsp" />  
-        <put-attribute name="header"
-           value="/WEB-INF/views/pages/secured/common/header.jsp" />  
-        <put-attribute name="menu"
-           value="/WEB-INF/views/pages/secured/common/menu.jsp" />  
+        <put-attribute name="includes" value="/WEB-INF/views/pages/secured/common/includes.jsp" />  
+        <put-attribute name="header" value="/WEB-INF/views/pages/secured/common/header.jsp" />  
+        <put-attribute name="menu" value="" />  
         <put-attribute name="body" value="" />  
         <put-attribute name="footer" value="" />  
     </definition>  
     <definition name="home" extends="template-def">  
         <put-attribute name="title" value="Home" />  
         <put-attribute name="body"	value="/WEB-INF/views/pages/secured/home/home.jsp" />   
+        <put-attribute name="menu"	value="/WEB-INF/views/pages/secured/common/menu.jsp" />
     </definition>  
     <definition name="login" extends="template-def">  
         <put-attribute name="title" value="Vema High Schools-Login" />  
-        <put-attribute name="menu" value=""/>
         <put-attribute name="body"	value="/WEB-INF/views/pages/public/login/login.jsp" />   
     </definition>
     <definition name="invalidlogin" extends="template-def">  
@@ -29,6 +26,7 @@
     <definition name="index" extends="template-def">  
         <put-attribute name="title" value="User Home" />  
         <put-attribute name="body"	value="/WEB-INF/views/pages/secured/home/home.jsp" />   
+         <put-attribute name="menu"	value="/WEB-INF/views/pages/secured/common/menu.jsp" />
     </definition>  
     <definition name="admissions" extends="template-def">  
         <put-attribute name="title" value="Admissions" />  

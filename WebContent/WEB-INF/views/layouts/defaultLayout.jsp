@@ -10,8 +10,14 @@
 </head>
 <body>
 	<div class="container-fluid">
-		<tiles:insertAttribute name="header" />
-		<tiles:insertAttribute name="menu" />
+		<div class="row" id="header_row">
+			<div class="col-10" id="main_logo_holder">
+				<tiles:insertAttribute name="header" />
+			</div>			
+			<div class="col-2">
+				<tiles:insertAttribute name="menu" />				
+			</div>
+		</div>
 		<tiles:insertAttribute name="body" />
 		<tiles:insertAttribute name="footer" />
 	</div>
